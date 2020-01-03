@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: demo
+server:
+  port: 8067
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    metrics:
+      enabled: true
+      tags:
+        application: ${spring.application.name}
